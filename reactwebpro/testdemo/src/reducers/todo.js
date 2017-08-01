@@ -10,12 +10,13 @@ const todo = (state, action) => {
             if(state.id!==action.id){
                 return state;
             }
+
             return Object.assign({},state,{
                 completed:!state.completed
             })
     }
 }
-const todos=(state,action)=>{
+const todos=(state=[],action)=>{
     switch (action.type){
         case 'ADD_TODO':
             return [

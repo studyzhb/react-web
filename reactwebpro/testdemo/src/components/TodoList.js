@@ -1,15 +1,27 @@
+import React, { Component } from 'react';
 import Todo from './Todo';
 
-const TodoList=({todos,onTodoClick})=>{
-    <ul>
-        {
-            todos.map(todo=>{
-                <Todo 
-                    key={todo.id}
-                    {...todo}
-                    onClick={()=>onTodoClick(todo.id)}
-                />
-            })
-        }
-    </ul>
+export default class TodoList extends Component {
+
+    render() {
+
+        const { todos, onTodoClick } = this.props
+        console.log(todos)
+        return (
+            <ul>
+                {
+                    todos.map(todo => {
+                        return (
+                            <Todo
+                                key={todo.id}
+                                {...todo}
+                                onClick={() => onTodoClick(todo.id)}
+                            />
+                        )
+                    })
+                }
+            </ul>
+        )
+    }
+
 }

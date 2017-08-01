@@ -1,22 +1,28 @@
+import React, { Component } from 'react';
 import FilterLink from '../containers/FilterLink';
 
-const Footer=()=>{
-    <p>
-        Show:
+class Footer extends Component {
+    render() {
+        return (
+            <p>
+                Show:
         {' '}
-        <FilterLink filter="SHOW_ALL">
-            All
+                <FilterLink filter="SHOW_ALL">
+                    All
         </FilterLink>
-        {', '}
-         <FilterLink filter="SHOW_ACTIVE">
-            Active
+                {', '}
+                <FilterLink filter="SHOW_ACTIVE">
+                    Active
         </FilterLink>
-        {', '}
-         <FilterLink filter="SHOW_COMPLETED">
-            All
+                {', '}
+                <FilterLink filter="SHOW_COMPLETED">
+                    All
         </FilterLink>
-        
-    </p>
+
+            </p>
+        )
+    }
+
 }
 
 export default Footer;
