@@ -8,7 +8,6 @@ export default class Todo extends Component {
         console.log('123131')
         return (
             <li onClick={onClick} style={{ textDecoration:completed? 'line-through':'none'}}>{text}
-                
             </li>
         )
     }
